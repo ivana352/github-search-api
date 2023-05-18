@@ -12,9 +12,8 @@ function App() {
   const [avatar, setAvatar] = useState('');
   const [userInput, setUserInput] = useState('');
   const [error, setError] = useState(null);
-
-                                                          // ====== > const [location, setLocation] = useState(''); < =====
-                                                            // ====== > const [bio, setBio] = useState(''); < =====
+  const [location, setLocation] = useState('')
+  const [bio, setBio] = useState('')
 
   useEffect(() => {
     fetch('https://api.github.com/users/example')
@@ -30,7 +29,10 @@ function App() {
     followers, 
     following, 
     public_repos, 
-    avatar_url 
+    avatar_url,
+    location,
+    bio
+
   }) => {
     setName(name);
     setUserName(login);
@@ -38,6 +40,8 @@ function App() {
     setFollowing(following);
     setRepos(public_repos);
     setAvatar(avatar_url);
+    setLocation(location);
+    setBio(bio)
   };
 
   const handleSearch = (e) => {
@@ -87,7 +91,9 @@ function App() {
               <Card.Header> {userName} </Card.Header>
 
                 <Card.Meta>
-                  <span className='date'>Joined in 2015</span>
+                  <span>
+                    {bio} User info
+                  </span>
                 </Card.Meta>
             </Card.Content>
 
@@ -101,14 +107,21 @@ function App() {
             <Card.Content extra>
               <a>
                 <Icon name='user' />
-                  {repos} Repositories
+                  {following} Following
               </a>
             </Card.Content>
 
             <Card.Content extra>
               <a>
                 <Icon name='user' />
-                  {following} Following
+                  {location}
+              </a>
+            </Card.Content>
+
+            <Card.Content extra>
+              <a>
+                <Icon name='user' />
+                  {repos} Repositories
               </a>
             </Card.Content>
 

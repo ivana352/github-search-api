@@ -98,31 +98,23 @@ function App() {
             </Card.Content>
 
             <Card.Content extra>
-              <a>
                 <Icon name='user' />
                   {followers} Followers
-              </a>
             </Card.Content>
 
             <Card.Content extra>
-              <a>
                 <Icon name='user' />
                   {following} Following
-              </a>
             </Card.Content>
 
             <Card.Content extra>
-              <a>
                 <Icon name='user' />
                   {location}
-              </a>
             </Card.Content>
 
             <Card.Content extra>
-              <a>
                 <Icon name='user' />
                   {repos} Repositories
-              </a>
             </Card.Content>
 
           </Card>

@@ -2,7 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Semantic - ui 
+## Semantic - ui
+
+installed
 
 ## Available Scripts
 
